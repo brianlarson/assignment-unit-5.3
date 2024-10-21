@@ -16,13 +16,13 @@ console.log(`Add Neil Young record to collection with addToCollection()`, addToC
 console.log(`Record collection is now:`, myCollection);
 
 console.log(`Add 6 records to collection by various artists`);
-addToCollection(myCollection, 'Lateralus', 'TOOL', 2001);
-addToCollection(myCollection, 'Gaslighter', 'The Chicks', 2020);
-addToCollection(myCollection, 'Pink Floyd', 'The Darkside of the Moon', 1973);
-addToCollection(myCollection, 'Take It Like a Man', 'Amanda Shires', 2022);
-addToCollection(myCollection, 'Love Letters From The Western Gate', 'Going To The Sun', 2020);
-addToCollection(myCollection, 'The Great Subconscious Club', 'K\'s Choice', 1994);
-console.log(`Record collection is now:`, myCollection);
+console.log(`Add record:`, addToCollection(myCollection, 'Lateralus', 'TOOL', 2001));
+console.log(`Add record:`, addToCollection(myCollection, 'Gaslighter', 'The Chicks', 2020));
+console.log(`Add record:`, addToCollection(myCollection, 'Pink Floyd', 'The Darkside of the Moon', 1973));
+console.log(`Add record:`, addToCollection(myCollection, 'Take It Like a Man', 'Amanda Shires', 2022));
+console.log(`Add record:`, addToCollection(myCollection, 'Love Letters From The Western Gate', 'Going To The Sun', 2020));
+console.log(`Add record:`, addToCollection(myCollection, 'The Great Subconscious Club', 'K\'s Choice', 1994));
+console.log(`Collection is now ${myCollection.length} records:`, myCollection);
 
 
 
