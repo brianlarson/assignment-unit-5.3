@@ -4,16 +4,17 @@ console.log('***** Music Collection *****')
 let myCollection = [];
 
 function addToCollection(collection, title, artist, yearPublished) {
-    if (collection && title && artist && yearPublished) {
+    if (collection && title) {
         const record = { title, artist, yearPublished };
         collection.push(record);
         return record;
     }
-    return false;
+    return null;
 }
 
-console.log(`Adding Neil Young record to collection with addToCollection()`, addToCollection(myCollection, 'Rust Never Sleeps', 'Neil Young', 1979));
+console.log(`Add Neil Young record to collection with addToCollection()`, addToCollection(myCollection, 'Rust Never Sleeps', 'Neil Young', 1979));
 console.log(`Record collection is now:`, myCollection);
+
 
 
 
