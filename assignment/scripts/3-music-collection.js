@@ -24,7 +24,17 @@ console.log(`Add record:`, addToCollection(myCollection, 'Love Letters From The 
 console.log(`Add record:`, addToCollection(myCollection, 'The Great Subconscious Club', 'K\'s Choice', 1994));
 console.log(`Collection is now ${myCollection.length} records:`, myCollection);
 
+function showCollection(collection) {
+    if (collection.length) {
+        for (const record of collection) {
+            console.log(`"${record.title}" by ${record.artist}, published in ${record.yearPublished}`);
+        }
+    }
+    return null;
+}
 
+console.log(`Show record collection with showCollection() in formatted strings:`);
+showCollection(myCollection);
 
 
 // PLEASE DO NOT MODIFY THIS. Just leave it down here at the bottom. Think of it
