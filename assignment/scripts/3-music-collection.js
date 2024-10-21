@@ -15,6 +15,14 @@ function addToCollection(collection, title, artist, yearPublished) {
 console.log(`Add Neil Young record to collection with addToCollection()`, addToCollection(myCollection, 'Rust Never Sleeps', 'Neil Young', 1979));
 console.log(`Record collection is now:`, myCollection);
 
+console.log(`Add 6 records to collection by various artists`);
+addToCollection(myCollection, 'Lateralus', 'TOOL', 2001);
+addToCollection(myCollection, 'Gaslighter', 'The Chicks', 2020);
+addToCollection(myCollection, 'Pink Floyd', 'The Darkside of the Moon', 1973);
+addToCollection(myCollection, 'Take It Like a Man', 'Amanda Shires', 2022);
+addToCollection(myCollection, 'Love Letters From The Western Gate', 'Going To The Sun', 2020);
+addToCollection(myCollection, 'The Great Subconscious Club', 'K\'s Choice', 1994);
+console.log(`Record collection is now:`, myCollection);
 
 
 
