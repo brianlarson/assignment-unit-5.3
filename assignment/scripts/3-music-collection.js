@@ -44,8 +44,9 @@ function findByArtist(collection, artist) {
                 results.push(record);
             }
         }
+        return results;
     }
-    return results;
+    return collection;
 }
 
 console.log(`Add an additional Neil Young record to collection with addToCollection()`);
@@ -57,6 +58,30 @@ console.log(`${results.length} albums found for 'Neil Young' using findByArtist(
 results = findByArtist(myCollection, 'Tina Turner');
 console.log(`${results.length} albums found for 'Tina Turner' using findByArtist():`, results);
 
+function search(collection, searchCriteria) {
+    let results = [];
+    if (searchCriteria.artist && searchCriteria.yearPublished) {
+        for (const record of collection) {
+            if (record.artist === searchCriteria.artist && record.yearPublished === searchCriteria.yearPublished) {
+                results.push(record);
+            }
+        }
+        return results;
+    }
+    return collection;
+}
+
+console.log(`Add fake Neil Young record with same publish year with addToCollection()`);
+addToCollection(myCollection, 'The Not An Actual Album Album', 'Neil Young', 1972);
+
+foundResults = search(myCollection, { artist: 'Neil Young', yearPublished: 1972 });
+console.log(`Test search() function with criteria ('Neil Young' & 1972) (expect 2 records)`, foundResults);
+
+notFoundResults = search(myCollection, { artist: 'Cher', yearPublished: 1492 });
+console.log(`Test search() function with non-matching criteria ('Cher' & 1492) (expect empty array)`, notFoundResults);
+
+badCriteriaResults = search(myCollection, {});
+console.log(`Test search() function with empty object as search criteria (expect all albums)`, badCriteriaResults);
 
 // PLEASE DO NOT MODIFY THIS. Just leave it down here at the bottom. Think of it
 // as a lil' chunk of friendly code that you don't need to understand right now.
