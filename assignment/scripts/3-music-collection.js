@@ -36,6 +36,23 @@ function showCollection(collection) {
 console.log(`Show record collection with showCollection() in formatted strings:`);
 showCollection(myCollection);
 
+function findByArtist(collection, artist) {
+    let results = [];
+    if (collection && artist) {
+        for (const record of collection) {
+            if (record.artist === artist) {
+                results.push(record);
+            }
+        }
+    }
+    return results;
+}
+
+console.log(`Add an additional Neil Young record to collection with addToCollection()`);
+addToCollection(myCollection, 'Harvest', 'Neil Young', 1972);
+
+let results = findByArtist(myCollection, 'Neil Young');
+console.log(`${results.length} albums found for 'Neil Young' using findByArtist():`, results);
 
 // PLEASE DO NOT MODIFY THIS. Just leave it down here at the bottom. Think of it
 // as a lil' chunk of friendly code that you don't need to understand right now.
